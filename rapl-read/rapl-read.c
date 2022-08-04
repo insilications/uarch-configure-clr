@@ -160,6 +160,7 @@ static long long read_msr(int fd, unsigned int which) {
 #define CPU_ATOM_GOLDMONT	92
 #define CPU_ATOM_GEMINI_LAKE	122
 #define CPU_ATOM_DENVERTON	95
+#define CPU_COMETLAKE	165
 
 #define CPU_AMD_FAM17H		0xc000
 
@@ -262,6 +263,9 @@ static int detect_cpu(void) {
 				break;
 			case CPU_KNIGHTS_MILL:
 				printf("Knight's Mill");
+				break;
+			case CPU_COMETLAKE:
+				printf("Comet Lake");
 				break;
 			case CPU_ATOM_GOLDMONT:
 			case CPU_ATOM_GEMINI_LAKE:
